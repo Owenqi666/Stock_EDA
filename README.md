@@ -5,7 +5,7 @@ Two components: an interactive analysis tool and a deep dive into AI-related sto
 
 ---
 
-## Part 1: Interactive Analysis Tool (`one.py`)
+## Part 1: Interactive Analysis Tool (`stock_eda.py`)
 
 Enter any tickers and date range — the tool downloads historical data,
 computes key financial metrics, and generates four charts automatically.
