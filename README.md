@@ -13,7 +13,7 @@ computes key financial metrics, and generates four charts automatically.
 ### How to Run
 ```bash
 pip install yfinance pandas matplotlib seaborn python-dateutil
-python3 one.py
+python3 stock_eda.py
 ```
 
 ### Usage
