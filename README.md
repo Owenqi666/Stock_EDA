@@ -129,12 +129,29 @@ risk-adjusted performance with less concentration risk.
 
 ## Metrics Explained
 
-| Metric | Formula | Interpretation |
-|--------|---------|----------------|
-| Ann. Return | mean(r) × 252 | Average yearly return |
-| Ann. Volatility | std(r) × √252 | Yearly risk/fluctuation |
-| Sharpe Ratio | Ann. Return / Ann. Volatility | Return per unit of risk. Higher is better |
-| Max Drawdown | min(P / cummax(P) − 1) | Worst peak-to-trough loss |
+**Annualised Return**
+
+$$\mu = \bar{r} \times 252$$
+
+**Annualised Volatility**
+
+$$\sigma = \text{std}(r) \times \sqrt{252}$$
+
+**Sharpe Ratio**
+
+$$S = \frac{\mu}{\sigma}$$
+
+**Max Drawdown**
+
+$$\text{MDD} = \min\left(\frac{P_t}{\max_{s \leq t}(P_s)} - 1\right)$$
+
+**Daily Return**
+
+$$r_t = \frac{P_t - P_{t-1}}{P_{t-1}}$$
+
+**Cumulative Return**
+
+$$C_t = \prod_{i=1}^{t}(1 + r_i)$$
 
 ## Libraries
 
