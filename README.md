@@ -11,7 +11,7 @@ matplotlib, and seaborn.
 ## Project Structure
 ```
 Stock_EDA/
-├── one.py            # Part 1: interactive analysis tool
+├── stock_eda.py      # Part 1: interactive analysis tool
 ├── analysis.py       # Part 2: AI stocks deep dive
 ├── requirements.txt  # dependencies
 ├── data/
@@ -28,7 +28,7 @@ Stock_EDA/
 
 ---
 
-## Part 1: Interactive Analysis Tool (`one.py`)
+## Part 1: Interactive Analysis Tool (`stock_eda.py`)
 
 A command-line tool that accepts any valid Yahoo Finance tickers and a date range,
 then automatically downloads historical price data, computes four key financial metrics,
@@ -37,7 +37,7 @@ and saves four charts to the `images/` directory.
 ### How to Run
 ```bash
 pip install -r requirements.txt
-python3 one.py
+python3 stock_eda.py
 ```
 
 ### Usage
@@ -164,7 +164,7 @@ sensitive to pure growth-stock sentiment.
 
 META was the worst performer (-73.7%), collapsing due to a combination of the
 rate-hike environment, a sharp decline in digital advertising revenue, and investor
-scepticism about its expensive metaverse strategy under Mark Zuckerberg.
+scepticism about its expensive metaverse strategy.
 
 NVDA, despite being the long-term winner of the group, still fell 62.7% in 2022 —
 a reminder that even the highest-quality companies carry significant drawdown risk
@@ -187,10 +187,10 @@ Holding NVDA alone delivered higher absolute returns (67.2% vs 44.7% annualised)
 but the equal-weight portfolio achieved a nearly identical Sharpe Ratio (1.26 vs 1.30)
 with significantly lower volatility (35.4% vs 51.8%).
 
-This illustrates a core principle of portfolio construction: **diversification reduces
-risk without proportionally reducing risk-adjusted returns**. An investor who held
-the portfolio rather than concentrating in NVDA would have experienced far smaller
-drawdowns while still capturing most of the risk-adjusted upside.
+This illustrates a core principle of portfolio construction: diversification reduces
+risk without proportionally reducing risk-adjusted returns. An investor who held the
+portfolio rather than concentrating in NVDA would have experienced far smaller drawdowns
+while still capturing most of the risk-adjusted upside.
 
 ---
 
@@ -234,17 +234,16 @@ for an investor who bought at the peak.
 $$C_t = \prod_{i=1}^{t}(1 + r_i)$$
 
 The compounded growth of $1 invested at the start date. Uses multiplication
-rather than addition because returns compound — a 10% gain followed by a
-10% loss does not return to the starting value.
+rather than addition because returns compound.
 
 ---
 
 ## Libraries
 
-| Library | Version | Purpose |
-|---------|---------|---------|
-| `yfinance` | latest | Download historical market data from Yahoo Finance |
-| `pandas` | latest | DataFrame manipulation, time series operations |
-| `matplotlib` | latest | Chart generation and styling |
-| `seaborn` | latest | Statistical visualisation (heatmaps) |
-| `python-dateutil` | latest | Flexible date string parsing |
+| Library | Purpose |
+|---------|---------|
+| `yfinance` | Download historical market data from Yahoo Finance |
+| `pandas` | DataFrame manipulation and time series operations |
+| `matplotlib` | Chart generation and styling |
+| `seaborn` | Statistical visualisation (correlation heatmaps) |
+| `python-dateutil` | Flexible date string parsing |
